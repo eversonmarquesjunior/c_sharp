@@ -5,7 +5,7 @@ class Aula22 {
     static void Main() {
  
         int num = 30;
-        dobrar1(num);                        
+        dobrar(ref num);                        
         Console.WriteLine(num);
 
     }
