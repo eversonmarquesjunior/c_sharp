@@ -1,14 +1,14 @@
 using System;
 
-class Jogador {
-    public int energia = 100;                  //variáveis-propriedades-métodos
+class Jogador {                                //classe
+    public int energia = 100;                  //objetos
     public bool vivo = true;
 
 }
 
 class Aula25 {
 
-    static void Main() {
+    static void Main() {                      //método
 
         Jogador j1 = new Jogador();           //objeto instanciado da classe Jogador  
         Jogador j2 = new Jogador(); 

@@ -10,7 +10,20 @@ class Jogador {
         numerocamisa = nc;          
         nome = n;
         time = t;
-    }
+    }    
+
+    /*public Jogador (int nc, string n) {                   //sobrecarga - mais de um construtor para a classe com qtde de parâmetros diferentes              
+        numerocamisa = nc;          
+        nome = n;
+        time = "Santos";
+    }*/  
+
+    /*public void info() {
+        Console.WriteLine("Número camisa: " +numerocamisa);
+        Console.WriteLine("Nome: " +nome);
+        Console.WriteLine("Time: " +time);
+    }*/
+                                                   
 }
 
 class Aula26 {
