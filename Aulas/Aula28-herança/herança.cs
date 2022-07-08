@@ -16,10 +16,10 @@ using System;
     class Carro:Veiculo {       //classe derivada
         public string marca;
         public string cor;
-        public Carro(string marca, string cor) {
+        public Carro(string marca, string cor, int vmaxima) {
             ligar();
             rodas = 4;
-            vmaxima = 160;
+            this.vmaxima = vmaxima;
             this.marca = marca;
             this.cor = cor;
         }
@@ -30,16 +30,20 @@ using System;
         static void Main() {
 
             string m, c;
+            int vm;
 
             Console.Write("Marca do Veículo: ");
             m = Console.ReadLine();
             Console.Write("Cor do Veículo: ");
             c = Console.ReadLine();
+            Console.Write("Velocidade Máxima do Veículo: ");
+            vm = int.Parse(Console.ReadLine());
 
-            Carro c1 = new Carro(m, c);
+            Carro c1 = new Carro(m, c, vm);
 
             Console.WriteLine("Marca: {0}. Cor: {1} ", m, c);
-            Console.WriteLine("Rodas: {0}. Velocidade Máxima: {1} ", c1.rodas, c1.vmaxima);
+            Console.WriteLine("Rodas: {0}.", c1.rodas);
+            Console.WriteLine("Velocidade Máxima: {0} KM/H ", c1.vmaxima);
             Console.WriteLine("Ligado: " +c1.ligado);
     }
 
