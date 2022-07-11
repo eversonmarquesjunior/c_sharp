@@ -25,6 +25,14 @@ using System;
         }
     }
 
+    class PrecoCarro:Carro {
+        public int preco;
+
+        public PrecoCarro() :base("HB20", "Branco", 180) {              //base - inicializa o construtor da classe base        
+            preco = 92000;
+        }
+    }
+
     class Aula28 {
 
         static void Main() {
@@ -40,11 +48,21 @@ using System;
             vm = int.Parse(Console.ReadLine());
 
             Carro c1 = new Carro(m, c, vm);
+            PrecoCarro pc1 = new PrecoCarro();
 
             Console.WriteLine("Marca: {0}. Cor: {1} ", m, c);
             Console.WriteLine("Rodas: {0}.", c1.rodas);
             Console.WriteLine("Velocidade Máxima: {0} KM/H ", c1.vmaxima);
             Console.WriteLine("Ligado: " +c1.ligado);
+
+            Console.WriteLine("----------------------------------------");
+
+            Console.WriteLine("Marca: {0}. Cor: {1} ", pc1.marca, pc1.cor);
+            Console.WriteLine("Rodas: {0}.", c1.rodas);
+            Console.WriteLine("Velocidade Máxima: {0} KM/H ", pc1.vmaxima);
+            Console.WriteLine("Ligado: " +c1.ligado);
+            Console.WriteLine("Preço: R$ {0}", pc1.preco);
+
     }
 
 }
