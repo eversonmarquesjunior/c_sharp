@@ -14,7 +14,7 @@ class Carro:Veiculo,Combate {                  //um classe pode usar várias int
     public bool ligado;
     private int municao;
     public Carro() {
-        setMunicao (100);
+        setMunicao(100);
     }
     public void setMunicao(int qtde){
         this.municao = qtde;
