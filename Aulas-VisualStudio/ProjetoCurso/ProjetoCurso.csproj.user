@@ -19,5 +19,17 @@
     <Compile Update="FormComboBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormDateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormLinkLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

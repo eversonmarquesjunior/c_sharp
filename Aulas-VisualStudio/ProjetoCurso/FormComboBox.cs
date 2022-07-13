@@ -59,5 +59,10 @@ namespace ProjetoCurso
                 }
             }
         }
+
+        private void FormComboBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

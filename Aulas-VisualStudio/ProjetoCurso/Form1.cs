@@ -69,5 +69,34 @@ namespace ProjetoCurso {
             FormComboBox formcombo = new FormComboBox();
             formcombo.ShowDialog();
         }
+
+        private void dateTimePickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDateTimePicker formdate = new FormDateTimePicker();
+            formdate.ShowDialog();
+        }
+
+        private void linkedLabelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLinkLabel formlinklabel = new FormLinkLabel();
+            formlinklabel.ShowDialog();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListBox formlistbox = new FormListBox();
+            formlistbox.ShowDialog();
+        }
+
+        private void listViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListView formlistview = new FormListView();
+            formlistview.ShowDialog();
+        }
     }
 }

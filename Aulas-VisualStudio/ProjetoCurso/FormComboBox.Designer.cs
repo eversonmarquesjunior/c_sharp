@@ -119,6 +119,7 @@
             this.Controls.Add(this.combo_frutas);
             this.Name = "FormComboBox";
             this.Text = "FormComboBox";
+            this.Load += new System.EventHandler(this.FormComboBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

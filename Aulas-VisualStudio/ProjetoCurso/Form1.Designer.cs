@@ -40,6 +40,10 @@
             this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkedLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +142,11 @@
             this.componentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkBoxToolStripMenuItem,
             this.checkedListBoxToolStripMenuItem,
-            this.comboBoxToolStripMenuItem});
+            this.comboBoxToolStripMenuItem,
+            this.dateTimePickerToolStripMenuItem,
+            this.linkedLabelToolStripMenuItem,
+            this.listBoxToolStripMenuItem,
+            this.listViewToolStripMenuItem});
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.componentesToolStripMenuItem.Text = "Componentes";
@@ -164,6 +172,34 @@
             this.comboBoxToolStripMenuItem.Text = "ComboBox";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
+            // dateTimePickerToolStripMenuItem
+            // 
+            this.dateTimePickerToolStripMenuItem.Name = "dateTimePickerToolStripMenuItem";
+            this.dateTimePickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dateTimePickerToolStripMenuItem.Text = "DateTimePicker";
+            this.dateTimePickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimePickerToolStripMenuItem_Click);
+            // 
+            // linkedLabelToolStripMenuItem
+            // 
+            this.linkedLabelToolStripMenuItem.Name = "linkedLabelToolStripMenuItem";
+            this.linkedLabelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.linkedLabelToolStripMenuItem.Text = "LinkedLabel";
+            this.linkedLabelToolStripMenuItem.Click += new System.EventHandler(this.linkedLabelToolStripMenuItem_Click);
+            // 
+            // listBoxToolStripMenuItem
+            // 
+            this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem.Text = "ListBox";
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
+            // 
+            // listViewToolStripMenuItem
+            // 
+            this.listViewToolStripMenuItem.Name = "listViewToolStripMenuItem";
+            this.listViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listViewToolStripMenuItem.Text = "ListView";
+            this.listViewToolStripMenuItem.Click += new System.EventHandler(this.listViewToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.ClientSize = new System.Drawing.Size(407, 442);
@@ -181,6 +217,7 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário Principal";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -203,5 +240,9 @@
         private ToolStripMenuItem checkBoxToolStripMenuItem;
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
         private ToolStripMenuItem comboBoxToolStripMenuItem;
+        private ToolStripMenuItem dateTimePickerToolStripMenuItem;
+        private ToolStripMenuItem linkedLabelToolStripMenuItem;
+        private ToolStripMenuItem listBoxToolStripMenuItem;
+        private ToolStripMenuItem listViewToolStripMenuItem;
     }
 }
