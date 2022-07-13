@@ -29,5 +29,10 @@ namespace ProjetoCurso
         {
             fp.tbox_listaanimais.Text = tbox_listaanimais.Text;
         }
+
+        private void FormAnimais_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

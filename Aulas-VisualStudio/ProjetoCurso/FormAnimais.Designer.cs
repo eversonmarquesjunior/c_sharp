@@ -52,6 +52,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Veículos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAnimais_FormClosed);
+            this.Load += new System.EventHandler(this.FormAnimais_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

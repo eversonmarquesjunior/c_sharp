@@ -7,5 +7,17 @@
     <Compile Update="FormAnimais.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCheckBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCheckBoxFAux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCheckedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormComboBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

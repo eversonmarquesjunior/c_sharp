@@ -51,5 +51,23 @@ namespace ProjetoCurso {
         {
             MessageBox.Show(num.ToString());
         }
+
+        private void checkBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCheckBox formcheckbox = new FormCheckBox();
+            formcheckbox.ShowDialog();
+        }
+
+        private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCheckedList formcheckedlist = new FormCheckedList();
+            formcheckedlist.ShowDialog();
+        }
+
+        private void comboBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormComboBox formcombo = new FormComboBox();
+            formcombo.ShowDialog();
+        }
     }
 }

@@ -35,6 +35,12 @@
             this.bt_limpar = new System.Windows.Forms.Button();
             this.bt_mostrar = new System.Windows.Forms.Button();
             this.bt_var = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.componentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_adicionar
@@ -43,7 +49,7 @@
             this.bt_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_adicionar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt_adicionar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_adicionar.Location = new System.Drawing.Point(236, 61);
+            this.bt_adicionar.Location = new System.Drawing.Point(228, 70);
             this.bt_adicionar.Name = "bt_adicionar";
             this.bt_adicionar.Size = new System.Drawing.Size(119, 23);
             this.bt_adicionar.TabIndex = 0;
@@ -56,7 +62,7 @@
             this.label_titulo.AutoSize = true;
             this.label_titulo.BackColor = System.Drawing.SystemColors.Control;
             this.label_titulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_titulo.Location = new System.Drawing.Point(60, 33);
+            this.label_titulo.Location = new System.Drawing.Point(52, 42);
             this.label_titulo.Name = "label_titulo";
             this.label_titulo.Size = new System.Drawing.Size(129, 21);
             this.label_titulo.TabIndex = 1;
@@ -64,7 +70,7 @@
             // 
             // tbox_animal
             // 
-            this.tbox_animal.Location = new System.Drawing.Point(60, 61);
+            this.tbox_animal.Location = new System.Drawing.Point(52, 70);
             this.tbox_animal.Name = "tbox_animal";
             this.tbox_animal.Size = new System.Drawing.Size(170, 23);
             this.tbox_animal.TabIndex = 2;
@@ -72,7 +78,7 @@
             // tbox_listaanimais
             // 
             this.tbox_listaanimais.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbox_listaanimais.Location = new System.Drawing.Point(60, 90);
+            this.tbox_listaanimais.Location = new System.Drawing.Point(52, 99);
             this.tbox_listaanimais.Multiline = true;
             this.tbox_listaanimais.Name = "tbox_listaanimais";
             this.tbox_listaanimais.ReadOnly = true;
@@ -85,7 +91,7 @@
             this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_limpar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_limpar.Location = new System.Drawing.Point(60, 289);
+            this.bt_limpar.Location = new System.Drawing.Point(52, 298);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(295, 23);
             this.bt_limpar.TabIndex = 4;
@@ -97,7 +103,7 @@
             // 
             this.bt_mostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_mostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_mostrar.Location = new System.Drawing.Point(60, 318);
+            this.bt_mostrar.Location = new System.Drawing.Point(52, 327);
             this.bt_mostrar.Name = "bt_mostrar";
             this.bt_mostrar.Size = new System.Drawing.Size(295, 23);
             this.bt_mostrar.TabIndex = 5;
@@ -109,13 +115,54 @@
             // 
             this.bt_var.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_var.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_var.Location = new System.Drawing.Point(60, 347);
+            this.bt_var.Location = new System.Drawing.Point(52, 356);
             this.bt_var.Name = "bt_var";
             this.bt_var.Size = new System.Drawing.Size(295, 23);
             this.bt_var.TabIndex = 6;
             this.bt_var.Text = "Valor variável";
             this.bt_var.UseVisualStyleBackColor = false;
             this.bt_var.Click += new System.EventHandler(this.bt_var_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.componentesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(407, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // componentesToolStripMenuItem
+            // 
+            this.componentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkBoxToolStripMenuItem,
+            this.checkedListBoxToolStripMenuItem,
+            this.comboBoxToolStripMenuItem});
+            this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
+            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.componentesToolStripMenuItem.Text = "Componentes";
+            // 
+            // checkBoxToolStripMenuItem
+            // 
+            this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkBoxToolStripMenuItem.Text = "CheckBox";
+            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
+            // 
+            // checkedListBoxToolStripMenuItem
+            // 
+            this.checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
+            this.checkedListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
+            this.checkedListBoxToolStripMenuItem.Click += new System.EventHandler(this.checkedListBoxToolStripMenuItem_Click);
+            // 
+            // comboBoxToolStripMenuItem
+            // 
+            this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comboBoxToolStripMenuItem.Text = "ComboBox";
+            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -127,11 +174,15 @@
             this.Controls.Add(this.tbox_animal);
             this.Controls.Add(this.label_titulo);
             this.Controls.Add(this.bt_adicionar);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário Principal";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +198,10 @@
         private Button bt_mostrar;
         private Button bt_var;
         public TextBox tbox_listaanimais;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem componentesToolStripMenuItem;
+        private ToolStripMenuItem checkBoxToolStripMenuItem;
+        private ToolStripMenuItem checkedListBoxToolStripMenuItem;
+        private ToolStripMenuItem comboBoxToolStripMenuItem;
     }
 }
