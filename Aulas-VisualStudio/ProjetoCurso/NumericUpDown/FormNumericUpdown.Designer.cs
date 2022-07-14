@@ -63,7 +63,7 @@
             // 
             // tbox_valor
             // 
-            this.tbox_valor.Location = new System.Drawing.Point(179, 12);
+            this.tbox_valor.Location = new System.Drawing.Point(150, 12);
             this.tbox_valor.Name = "tbox_valor";
             this.tbox_valor.Size = new System.Drawing.Size(100, 23);
             this.tbox_valor.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.bt_definir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_definir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_definir.Location = new System.Drawing.Point(285, 12);
+            this.bt_definir.Location = new System.Drawing.Point(256, 12);
             this.bt_definir.Name = "bt_definir";
             this.bt_definir.Size = new System.Drawing.Size(92, 23);
             this.bt_definir.TabIndex = 2;
@@ -94,6 +94,7 @@
             this.Name = "FormNumericUpdown";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNumericUpdown";
+            this.Load += new System.EventHandler(this.FormNumericUpdown_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericupdown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

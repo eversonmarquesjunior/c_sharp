@@ -16,6 +16,9 @@
     <Compile Update="DateTime\FormDateTimePicker.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditorTexto\FormEditorTexto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormPrincipal\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +41,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NumericUpDown\FormNumericUpdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PictureBox_e_ArquivoRecursos\FormPictureBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Progressbar\FormProgressbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RadioButton\FormRadioButton.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

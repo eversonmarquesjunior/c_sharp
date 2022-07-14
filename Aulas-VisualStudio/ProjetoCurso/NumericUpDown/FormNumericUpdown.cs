@@ -29,5 +29,10 @@ namespace ProjetoCurso
                 numericupdown1.Value = Decimal.Parse(tbox_valor.Text);
             }
         }
+
+        private void FormNumericUpdown_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

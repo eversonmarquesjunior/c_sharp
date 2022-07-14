@@ -59,5 +59,62 @@ namespace ProjetoCurso.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Caricatura {
+            get {
+                object obj = ResourceManager.GetObject("Caricatura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desenho {
+            get {
+                object obj = ResourceManager.GetObject("desenho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caricatura.
+        /// </summary>
+        internal static string Foto {
+            get {
+                return ResourceManager.GetString("Foto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ferrari.
+        /// </summary>
+        internal static string NomeCarro {
+            get {
+                return ResourceManager.GetString("NomeCarro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Papel {
+            get {
+                object obj = ResourceManager.GetObject("Papel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Papel de Parede.
+        /// </summary>
+        internal static string PapeldeParede {
+            get {
+                return ResourceManager.GetString("PapeldeParede", resourceCulture);
+            }
+        }
     }
 }

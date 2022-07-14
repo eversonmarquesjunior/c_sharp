@@ -85,10 +85,6 @@ namespace ProjetoCurso {
             formlinklabel.ShowDialog();
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void listBoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -144,6 +140,30 @@ namespace ProjetoCurso {
         {
             FormNumericUpdown formnumericup = new FormNumericUpdown();
             formnumericup.ShowDialog();
+        }
+
+        private void pictureBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPictureBox formpicture = new FormPictureBox();
+            formpicture.ShowDialog(); 
+        }
+
+        private void progressbarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProgressbar formprogress = new FormProgressbar();
+            formprogress.ShowDialog();
+        }
+
+        private void radioButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRadioButton formradio = new FormRadioButton();
+            formradio.ShowDialog();
+        }
+
+        private void editorTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditorTexto formeditor = new FormEditorTexto();
+            formeditor.ShowDialog();
         }
     }
 }
