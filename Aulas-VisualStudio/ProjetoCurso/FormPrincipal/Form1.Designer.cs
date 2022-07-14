@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.bt_adicionar = new System.Windows.Forms.Button();
             this.label_titulo = new System.Windows.Forms.Label();
             this.tbox_animal = new System.Windows.Forms.TextBox();
@@ -44,7 +46,16 @@
             this.linkedLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maskedTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.MenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuitem_restaurar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuitem_msg = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuitem_fechar = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.MenuNotificacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_adicionar
@@ -146,7 +157,10 @@
             this.dateTimePickerToolStripMenuItem,
             this.linkedLabelToolStripMenuItem,
             this.listBoxToolStripMenuItem,
-            this.listViewToolStripMenuItem});
+            this.listViewToolStripMenuItem,
+            this.maskedTextBoxToolStripMenuItem,
+            this.monthCalendarToolStripMenuItem,
+            this.numericUpDownToolStripMenuItem});
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.componentesToolStripMenuItem.Text = "Componentes";
@@ -200,6 +214,64 @@
             this.listViewToolStripMenuItem.Text = "ListView";
             this.listViewToolStripMenuItem.Click += new System.EventHandler(this.listViewToolStripMenuItem_Click);
             // 
+            // maskedTextBoxToolStripMenuItem
+            // 
+            this.maskedTextBoxToolStripMenuItem.Name = "maskedTextBoxToolStripMenuItem";
+            this.maskedTextBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maskedTextBoxToolStripMenuItem.Text = "MaskedTextBox";
+            this.maskedTextBoxToolStripMenuItem.Click += new System.EventHandler(this.maskedTextBoxToolStripMenuItem_Click);
+            // 
+            // monthCalendarToolStripMenuItem
+            // 
+            this.monthCalendarToolStripMenuItem.Name = "monthCalendarToolStripMenuItem";
+            this.monthCalendarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.monthCalendarToolStripMenuItem.Text = "MonthCalendar";
+            this.monthCalendarToolStripMenuItem.Click += new System.EventHandler(this.monthCalendarToolStripMenuItem_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.MenuNotificacoes;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Menu";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // MenuNotificacoes
+            // 
+            this.MenuNotificacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuitem_restaurar,
+            this.menuitem_msg,
+            this.menuitem_fechar});
+            this.MenuNotificacoes.Name = "contextMenuStrip1";
+            this.MenuNotificacoes.Size = new System.Drawing.Size(134, 70);
+            this.MenuNotificacoes.Opening += new System.ComponentModel.CancelEventHandler(this.MenuNotificacoes_Opening);
+            this.MenuNotificacoes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuNotificacoes_ItemClicked);
+            // 
+            // menuitem_restaurar
+            // 
+            this.menuitem_restaurar.Name = "menuitem_restaurar";
+            this.menuitem_restaurar.Size = new System.Drawing.Size(133, 22);
+            this.menuitem_restaurar.Text = "Restaurar";
+            // 
+            // menuitem_msg
+            // 
+            this.menuitem_msg.Name = "menuitem_msg";
+            this.menuitem_msg.Size = new System.Drawing.Size(133, 22);
+            this.menuitem_msg.Text = "Mensagem";
+            // 
+            // menuitem_fechar
+            // 
+            this.menuitem_fechar.Name = "menuitem_fechar";
+            this.menuitem_fechar.Size = new System.Drawing.Size(133, 22);
+            this.menuitem_fechar.Text = "Fechar";
+            // 
+            // numericUpDownToolStripMenuItem
+            // 
+            this.numericUpDownToolStripMenuItem.Name = "numericUpDownToolStripMenuItem";
+            this.numericUpDownToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.numericUpDownToolStripMenuItem.Text = "NumericUpDown";
+            this.numericUpDownToolStripMenuItem.Click += new System.EventHandler(this.numericUpDownToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.ClientSize = new System.Drawing.Size(407, 442);
@@ -220,6 +292,7 @@
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.MenuNotificacoes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +317,13 @@
         private ToolStripMenuItem linkedLabelToolStripMenuItem;
         private ToolStripMenuItem listBoxToolStripMenuItem;
         private ToolStripMenuItem listViewToolStripMenuItem;
+        private ToolStripMenuItem maskedTextBoxToolStripMenuItem;
+        private ToolStripMenuItem monthCalendarToolStripMenuItem;
+        private NotifyIcon notifyIcon1;
+        private ContextMenuStrip MenuNotificacoes;
+        private ToolStripMenuItem menuitem_restaurar;
+        private ToolStripMenuItem menuitem_msg;
+        private ToolStripMenuItem menuitem_fechar;
+        private ToolStripMenuItem numericUpDownToolStripMenuItem;
     }
 }

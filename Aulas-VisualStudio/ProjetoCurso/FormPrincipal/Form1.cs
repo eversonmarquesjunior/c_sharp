@@ -1,3 +1,6 @@
+
+using ProjetoCurso.MaskedTextBox;
+
 namespace ProjetoCurso {
     public partial class FormPrincipal : Form {
 
@@ -97,6 +100,50 @@ namespace ProjetoCurso {
         {
             FormListView formlistview = new FormListView();
             formlistview.ShowDialog();
+        }
+
+        private void maskedTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMaskedTextBox formmasked = new FormMaskedTextBox();
+            formmasked.ShowDialog();
+        }
+
+        private void monthCalendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMonthCalendar formmonth = new FormMonthCalendar();
+            formmonth.ShowDialog();
+        }
+
+        private void MenuNotificacoes_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name.ToString() == "menuitem_fechar")         //NotifyIcon - disponibiliza o ícone na área de notificações
+            {                                                               //associando com o ContextMenuStrip para abrir um menu de opções
+                this.Close();
+            }
+            else if (e.ClickedItem.Name.ToString() == "menuitem_restaurar")
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (e.ClickedItem.Name.ToString() == "menuitem_msg")
+            {
+                MessageBox.Show("Tudo certo por aqui");
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void MenuNotificacoes_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void numericUpDownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNumericUpdown formnumericup = new FormNumericUpdown();
+            formnumericup.ShowDialog();
         }
     }
 }

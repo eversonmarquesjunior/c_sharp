@@ -31,5 +31,14 @@
     <Compile Update="ListView\FormListView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MaskedTextBox\FormMaskedTextBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MonthCalendar\FormMonthCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NumericUpDown\FormNumericUpdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
