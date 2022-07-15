@@ -32,3 +32,4 @@ D:\CursoC#\Aulas-VisualStudio\ProjetoCurso\obj\Debug\net6.0-windows\ProjetoCurso
 D:\CursoC#\Aulas-VisualStudio\ProjetoCurso\obj\Debug\net6.0-windows\ProjetoCurso.FormProgressbar.resources
 D:\CursoC#\Aulas-VisualStudio\ProjetoCurso\obj\Debug\net6.0-windows\ProjetoCurso.FormRadioButton.resources
 D:\CursoC#\Aulas-VisualStudio\ProjetoCurso\obj\Debug\net6.0-windows\ProjetoCurso.FormEditorTexto.resources
+D:\CursoC#\Aulas-VisualStudio\ProjetoCurso\obj\Debug\net6.0-windows\ProjetoCurso.FormTrackBar.resources

@@ -165,5 +165,11 @@ namespace ProjetoCurso {
             FormEditorTexto formeditor = new FormEditorTexto();
             formeditor.ShowDialog();
         }
+
+        private void trackBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTrackBar formtrackbar = new FormTrackBar();
+            formtrackbar.ShowDialog();
+        }
     }
 }

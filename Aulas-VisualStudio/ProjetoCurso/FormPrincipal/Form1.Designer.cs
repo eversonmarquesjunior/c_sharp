@@ -52,12 +52,13 @@
             this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.radioButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editorTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuitem_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitem_msg = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitem_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.editorTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificacoes.SuspendLayout();
             this.SuspendLayout();
@@ -168,7 +169,8 @@
             this.pictureBoxToolStripMenuItem,
             this.progressbarToolStripMenuItem,
             this.radioButtonToolStripMenuItem,
-            this.editorTextoToolStripMenuItem});
+            this.editorTextoToolStripMenuItem,
+            this.trackBarToolStripMenuItem});
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.componentesToolStripMenuItem.Text = "Componentes";
@@ -264,6 +266,13 @@
             this.radioButtonToolStripMenuItem.Text = "RadioButton";
             this.radioButtonToolStripMenuItem.Click += new System.EventHandler(this.radioButtonToolStripMenuItem_Click);
             // 
+            // editorTextoToolStripMenuItem
+            // 
+            this.editorTextoToolStripMenuItem.Name = "editorTextoToolStripMenuItem";
+            this.editorTextoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editorTextoToolStripMenuItem.Text = "EditorTexto";
+            this.editorTextoToolStripMenuItem.Click += new System.EventHandler(this.editorTextoToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificacoes;
@@ -301,12 +310,12 @@
             this.menuitem_fechar.Size = new System.Drawing.Size(133, 22);
             this.menuitem_fechar.Text = "Fechar";
             // 
-            // editorTextoToolStripMenuItem
+            // trackBarToolStripMenuItem
             // 
-            this.editorTextoToolStripMenuItem.Name = "editorTextoToolStripMenuItem";
-            this.editorTextoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editorTextoToolStripMenuItem.Text = "EditorTexto";
-            this.editorTextoToolStripMenuItem.Click += new System.EventHandler(this.editorTextoToolStripMenuItem_Click);
+            this.trackBarToolStripMenuItem.Name = "trackBarToolStripMenuItem";
+            this.trackBarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trackBarToolStripMenuItem.Text = "TrackBar";
+            this.trackBarToolStripMenuItem.Click += new System.EventHandler(this.trackBarToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -364,6 +373,7 @@
         private ToolStripMenuItem progressbarToolStripMenuItem;
         private ToolStripMenuItem radioButtonToolStripMenuItem;
         private ToolStripMenuItem editorTextoToolStripMenuItem;
+        private ToolStripMenuItem trackBarToolStripMenuItem;
 
         public EventHandler FormPrincipal_Load { get; private set; }
     }
