@@ -52,7 +52,19 @@
     <Compile Update="RadioButton\FormRadioButton.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SplitContainer\FormSplitContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TabControl\FormTabControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TrackBar\FormTrackBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TreeView\FormTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WebBrowser\FormWebBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

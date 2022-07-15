@@ -26,6 +26,7 @@
   <ItemGroup>
     <Folder Include="NumericUpDown\" />
     <Folder Include="RadioButton\" />
+    <Folder Include="WebBrowser\" />
   </ItemGroup>
 
 </Project>

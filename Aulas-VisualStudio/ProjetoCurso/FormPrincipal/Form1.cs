@@ -171,5 +171,29 @@ namespace ProjetoCurso {
             FormTrackBar formtrackbar = new FormTrackBar();
             formtrackbar.ShowDialog();
         }
+
+        private void treeViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTreeView formtreeview = new FormTreeView();
+            formtreeview.ShowDialog();
+        }
+
+        private void webBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormWebBrowser formweb = new FormWebBrowser();
+            formweb.ShowDialog();
+        }
+
+        private void splitContainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSplitContainer formsplitc = new FormSplitContainer();
+            formsplitc.ShowDialog();
+        }
+
+        private void tabControlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTabControl formtab = new FormTabControl();
+            formtab.ShowDialog();
+        }
     }
 }
