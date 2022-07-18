@@ -195,5 +195,35 @@ namespace ProjetoCurso {
             FormTabControl formtab = new FormTabControl();
             formtab.ShowDialog();
         }
+
+        private void tableLayoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTableLayout formtable = new FormTableLayout();
+            formtable.ShowDialog();
+        }
+
+        private void toolStripContainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormToolStripContainer formtstripcontainer = new FormToolStripContainer();
+            formtstripcontainer.ShowDialog();
+        }
+
+        private void backgroundWorkerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBackgroundWorker formbackworker = new FormBackgroundWorker();
+            formbackworker.ShowDialog();
+        }
+
+        private void timerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTimer formtimer = new FormTimer();
+            formtimer.ShowDialog();
+        }
+
+        private void aplicativoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSQLite formapp = new FormSQLite();
+            formapp.ShowDialog();
+        }
     }
 }
