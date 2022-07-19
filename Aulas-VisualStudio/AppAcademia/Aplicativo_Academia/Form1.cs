@@ -8,6 +8,24 @@ namespace Aplicativo_Academia
             FormLogin formlogin = new FormLogin(this);
             formlogin.ShowDialog();
         }
+        private void AbrirForm(int nivel, Form f)
+        {
+            if (Global.logado)
+            {
+                if (Global.nivel >= nivel)
+                {
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum usuário logado");
+            }
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -29,63 +47,26 @@ namespace Aplicativo_Academia
             Global.logado = false;
         }
 
-        private void bancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Global.logado)
-            {
-                if(Global.nivel >= 3)
-                {
-                    //procedimentos
-                }
-                else
-                {
-                    MessageBox.Show("Usuário Nível 3 necessário");                
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum usuário logado");
-            }
-        }
-
         private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Global.logado)
-            {
-                if (Global.nivel >= 2)
-                {
-                    FormNovoUsuario formnovousuario = new FormNovoUsuario();
-                    formnovousuario.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Usuário Nível 2 necessário");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum usuário logado");
-            }
+            FormNovoUsuario formnovousuario = new FormNovoUsuario();
+            AbrirForm(2, formnovousuario);
         }
 
         private void gestãoDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Global.logado)
-            {
-                if (Global.nivel >= 2)
-                {
-                    FormGestaoUsuarios formgestao = new FormGestaoUsuarios();
-                    formgestao.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Usuário Nível 2 necessário");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum usuário logado");
-            }
+            FormGestaoUsuarios formgestao = new FormGestaoUsuarios();
+            AbrirForm(2, formgestao);
+        }
+        private void horáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHorarios formhorarios = new FormHorarios();
+            AbrirForm(3, formhorarios);
+        }
+        private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProfessores formprofessores = new FormProfessores();
+            AbrirForm(3, formprofessores);
         }
 
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +74,24 @@ namespace Aplicativo_Academia
             if (Global.logado)
             {
                 //procedimentos
+            }
+            else
+            {
+                MessageBox.Show("Nenhum usuário logado");
+            }
+        }
+        private void bancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Global.logado)
+            {
+                if (Global.nivel >= 3)
+                {
+                    //procedimentos
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido");
+                }
             }
             else
             {

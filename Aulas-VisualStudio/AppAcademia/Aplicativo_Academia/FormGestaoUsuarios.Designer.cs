@@ -238,6 +238,7 @@
             this.bt_excluiruser.TabIndex = 3;
             this.bt_excluiruser.Text = "Excluir Usuário";
             this.bt_excluiruser.UseVisualStyleBackColor = false;
+            this.bt_excluiruser.Click += new System.EventHandler(this.bt_excluiruser_Click);
             // 
             // bt_salvaralt
             // 

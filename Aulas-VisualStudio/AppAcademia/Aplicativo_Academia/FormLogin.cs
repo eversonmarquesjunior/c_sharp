@@ -33,7 +33,7 @@ namespace Aplicativo_Academia
             }
 
             string sql = "SELECT * FROM tb_usuarios WHERE T_USERNAME = '" +username+ "' AND T_SENHA_USUARIO = '" +senha+ "'";
-            dt = Banco.Consulta(sql);
+            dt = Banco.DQL(sql);
 
             if (dt.Rows.Count == 1)
             {

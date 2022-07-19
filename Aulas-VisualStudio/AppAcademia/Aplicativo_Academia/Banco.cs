@@ -12,12 +12,66 @@ namespace Aplicativo_Academia
     {
         private static SQLiteConnection conexao;
 
+        //Funções Genéricas
+        public static DataTable DQL(string sql)     //DataQueryLanguage - (select)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = sql;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                da.Fill(dt);
+                vconexao.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void DML(string q, string msgOK = null, string msgERRO = null)       //DataManipulationLanguage - (insert/delete/update)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = q;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                cmd.ExecuteNonQuery();
+                vconexao.Close();
+
+                if (msgOK != null)
+                {
+                    MessageBox.Show(msgOK);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (msgERRO != null)
+                {
+                    MessageBox.Show(msgERRO + "\n" + ex.Message);
+                }
+                throw ex;
+            }
+        }
+
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source = D:\\CursoC#\\Aulas-VisualStudio\\AppAcademia\\Aplicativo_Academia\\Banco\\Banco_Academia.db"); 
+            conexao = new SQLiteConnection("Data Source = " +Global.caminhobanco + Global.nomebanco); 
             conexao.Open();
             return conexao;
         }
+
         public static DataTable ObterTodosUsuarios()
         {
             SQLiteDataAdapter da = null;
@@ -41,28 +95,8 @@ namespace Aplicativo_Academia
             }
 
         }
-        public static DataTable Consulta(string sql)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
 
-            try
-            {
-                var vconexao = ConexaoBanco();
-
-                var cmd = vconexao.CreateCommand();          
-                cmd.CommandText = sql;
-                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
-                da.Fill(dt);
-                vconexao.Close();
-                return dt;
-                
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //FIM Funções Genéricas
 
         //Funções Formulário GestaoUsuarios
 

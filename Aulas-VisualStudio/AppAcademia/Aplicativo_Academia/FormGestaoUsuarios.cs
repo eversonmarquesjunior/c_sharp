@@ -84,5 +84,16 @@ namespace Aplicativo_Academia
 
             datagrid_usuarios[1, linha].Value = tbox_nome.Text;
         }
+
+        private void bt_excluiruser_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseja mesmo excluir?", "Confirmação", MessageBoxButtons.YesNo);
+
+            if(res == DialogResult.Yes)
+            {
+                Banco.ExcluirUsuarios(tbox_id.Text);
+                datagrid_usuarios.Rows.Remove(datagrid_usuarios.CurrentRow);
+            }
+        }
     }
 }
