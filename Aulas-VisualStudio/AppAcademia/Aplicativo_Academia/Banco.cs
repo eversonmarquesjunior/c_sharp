@@ -25,17 +25,18 @@ namespace Aplicativo_Academia
 
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand()){
-                    cmd.CommandText = "SELECT * FROM tb_usuarios";
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                da.Fill(dt);
+                vconexao.Close();
+                return dt;
+                
             }
             catch (Exception ex)
             {
-                ConexaoBanco().Close();
                 throw ex;
             }
 
@@ -47,20 +48,175 @@ namespace Aplicativo_Academia
 
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand())
-                {
-                    cmd.CommandText = sql;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();          
+                cmd.CommandText = sql;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                da.Fill(dt);
+                vconexao.Close();
+                return dt;
+                
             }
             catch (Exception ex)
             {
-                ConexaoBanco().Close();
                 throw ex;
             }
+        }
+
+        //Funções Formulário GestaoUsuarios
+
+        public static DataTable ObterIdNomeUsuarios()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = "SELECT N_ID_USUARIO as 'ID Usuário', T_NOME_USUARIO as 'Nome Usuário' FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                da.Fill(dt);
+                vconexao.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public static DataTable ObterDadosUsuarios(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios WHERE N_ID_USUARIO = " + id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                da.Fill(dt);
+                vconexao.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public static void AtualizarUsuarios(Usuario u)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = "UPDATE tb_usuarios SET T_NOME_USUARIO = '" +u.nome+ "', T_USERNAME = '" +u.username+ "', T_SENHA_USUARIO = '" +u.senha+ "', T_STATUS_USUARIO = '" +u.status +"', N_NIVEL_USUARIO = " +u.nivel+ " WHERE N_ID_USUARIO = " +u.id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                cmd.ExecuteNonQuery();
+                vconexao.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public static void ExcluirUsuarios(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = " DELETE FROM tb_usuarios WHERE N_ID_USUARIO = " +id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+                cmd.ExecuteNonQuery();
+                vconexao.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        //Fim Funções Formulário GestaoUsuarios
+
+        //Funções Formulário NovoUsuario
+
+        public static void NovoUsuario(Usuario u)
+        {
+            if (ExisteUsername(u))
+            {
+                MessageBox.Show("Username já existe");
+                return;
+            }
+
+            try
+            {
+                var vconexao = ConexaoBanco();
+
+                var cmd = vconexao.CreateCommand();
+                cmd.CommandText = "INSERT INTO tb_usuarios (T_NOME_USUARIO, T_USERNAME, T_SENHA_USUARIO, T_STATUS_USUARIO, N_NIVEL_USUARIO) VALUES (@nome, @username, @senha, @status, @nivel)";
+                cmd.Parameters.AddWithValue("@nome", u.nome);
+                cmd.Parameters.AddWithValue("@username", u.username);
+                cmd.Parameters.AddWithValue("@senha", u.senha);
+                cmd.Parameters.AddWithValue("@status", u.status);
+                cmd.Parameters.AddWithValue("@nivel", u.nivel);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Novo usuário inserido");
+                vconexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir novo usuário");             
+            }
+        }
+
+        //FIM Funções Formulário NovoUsuario
+
+        //Rotinas Gerais
+
+        public static bool ExisteUsername(Usuario u)
+        {
+            bool res;
+
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            var vconexao = ConexaoBanco();
+
+            var cmd = vconexao.CreateCommand();
+            cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME = '" +u.username+ "'";
+            da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
+            da.Fill(dt);
+            
+            if(dt.Rows.Count > 0)
+            {
+                res = true;
+            }
+            else
+            {
+                res = false;
+            }
+
+            vconexao.Close();
+            return res;
         }
     }
 }

@@ -119,9 +119,19 @@
             0,
             0,
             0});
+            this.numeric_nivel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numeric_nivel.Name = "numeric_nivel";
             this.numeric_nivel.Size = new System.Drawing.Size(100, 23);
             this.numeric_nivel.TabIndex = 7;
+            this.numeric_nivel.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -182,7 +192,7 @@
             // 
             // bt_fechar
             // 
-            this.bt_fechar.BackColor = System.Drawing.Color.Cyan;
+            this.bt_fechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bt_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_fechar.Location = new System.Drawing.Point(364, 3);
@@ -191,6 +201,7 @@
             this.bt_fechar.TabIndex = 3;
             this.bt_fechar.Text = "Fechar";
             this.bt_fechar.UseVisualStyleBackColor = false;
+            this.bt_fechar.Click += new System.EventHandler(this.bt_fechar_Click);
             // 
             // bt_cancelar
             // 
@@ -203,6 +214,7 @@
             this.bt_cancelar.TabIndex = 2;
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = false;
+            this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
             // bt_salvar
             // 
@@ -228,6 +240,7 @@
             this.bt_novo.TabIndex = 0;
             this.bt_novo.Text = "Novo";
             this.bt_novo.UseVisualStyleBackColor = false;
+            this.bt_novo.Click += new System.EventHandler(this.bt_novo_Click);
             // 
             // FormNovoUsuario
             // 

@@ -60,6 +60,7 @@
             this.tbox_user.Name = "tbox_user";
             this.tbox_user.Size = new System.Drawing.Size(165, 23);
             this.tbox_user.TabIndex = 2;
+            this.tbox_user.Text = "juninho";
             // 
             // tbox_senha
             // 
@@ -68,6 +69,7 @@
             this.tbox_senha.PasswordChar = '*';
             this.tbox_senha.Size = new System.Drawing.Size(165, 23);
             this.tbox_senha.TabIndex = 3;
+            this.tbox_senha.Text = "123";
             // 
             // bt_logar
             // 

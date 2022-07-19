@@ -74,7 +74,8 @@ namespace Aplicativo_Academia
             {
                 if (Global.nivel >= 2)
                 {
-                    //procedimentos
+                    FormGestaoUsuarios formgestao = new FormGestaoUsuarios();
+                    formgestao.ShowDialog();
                 }
                 else
                 {
