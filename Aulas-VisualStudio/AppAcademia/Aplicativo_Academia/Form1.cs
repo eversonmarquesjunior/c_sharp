@@ -68,6 +68,11 @@ namespace Aplicativo_Academia
             FormProfessores formprofessores = new FormProfessores();
             AbrirForm(3, formprofessores);
         }
+        private void turmasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTurmas formturmas = new FormTurmas();
+            AbrirForm(3, formturmas);
+        }
 
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {

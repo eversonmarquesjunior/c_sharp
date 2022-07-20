@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.mtbox_tel = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_excluirprof = new System.Windows.Forms.Button();
             this.bt_salvarprof = new System.Windows.Forms.Button();
             this.bt_addprof = new System.Windows.Forms.Button();
-            this.datagrid_professores = new System.Windows.Forms.DataGridView();
             this.tbox_idprof = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbox_nomeprof = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.datagrid_professores = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_professores)).BeginInit();
             this.SuspendLayout();
@@ -111,31 +111,6 @@
             this.bt_addprof.UseVisualStyleBackColor = false;
             this.bt_addprof.Click += new System.EventHandler(this.bt_addprof_Click);
             // 
-            // datagrid_professores
-            // 
-            this.datagrid_professores.AllowUserToAddRows = false;
-            this.datagrid_professores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_professores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.datagrid_professores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_professores.EnableHeadersVisualStyles = false;
-            this.datagrid_professores.Location = new System.Drawing.Point(7, 49);
-            this.datagrid_professores.MultiSelect = false;
-            this.datagrid_professores.Name = "datagrid_professores";
-            this.datagrid_professores.ReadOnly = true;
-            this.datagrid_professores.RowHeadersVisible = false;
-            this.datagrid_professores.RowTemplate.Height = 25;
-            this.datagrid_professores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_professores.Size = new System.Drawing.Size(359, 408);
-            this.datagrid_professores.TabIndex = 8;
-            this.datagrid_professores.SelectionChanged += new System.EventHandler(this.datagrid_professores_SelectionChanged);
-            // 
             // tbox_idprof
             // 
             this.tbox_idprof.BackColor = System.Drawing.SystemColors.Window;
@@ -173,17 +148,42 @@
             this.label3.Text = "Professor";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // datagrid_professores
+            // 
+            this.datagrid_professores.AllowUserToAddRows = false;
+            this.datagrid_professores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_professores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagrid_professores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_professores.EnableHeadersVisualStyles = false;
+            this.datagrid_professores.Location = new System.Drawing.Point(7, 49);
+            this.datagrid_professores.MultiSelect = false;
+            this.datagrid_professores.Name = "datagrid_professores";
+            this.datagrid_professores.ReadOnly = true;
+            this.datagrid_professores.RowHeadersVisible = false;
+            this.datagrid_professores.RowTemplate.Height = 25;
+            this.datagrid_professores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagrid_professores.Size = new System.Drawing.Size(359, 408);
+            this.datagrid_professores.TabIndex = 14;
+            this.datagrid_professores.SelectionChanged += new System.EventHandler(this.datagrid_professores_SelectionChanged_1);
+            // 
             // FormProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 494);
+            this.Controls.Add(this.datagrid_professores);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbox_nomeprof);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mtbox_tel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.datagrid_professores);
             this.Controls.Add(this.tbox_idprof);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -191,7 +191,7 @@
             this.MinimizeBox = false;
             this.Name = "FormProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProfessores";
+            this.Text = "Gestão Professores";
             this.Load += new System.EventHandler(this.FormProfessores_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_professores)).EndInit();
@@ -208,10 +208,10 @@
         private Button bt_excluirprof;
         private Button bt_salvarprof;
         private Button bt_addprof;
-        private DataGridView datagrid_professores;
         private TextBox tbox_idprof;
         private Label label1;
         private TextBox tbox_nomeprof;
         private Label label3;
+        private DataGridView datagrid_professores;
     }
 }

@@ -36,3 +36,4 @@ D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\net6.0-w
 D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\net6.0-windows\Aplicativo_Academia.FormGestaoUsuarios.resources
 D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\net6.0-windows\Aplicativo_Academia.FormHorarios.resources
 D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\net6.0-windows\Aplicativo_Academia.FormProfessores.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\net6.0-windows\Aplicativo_Academia.FormTurmas.resources

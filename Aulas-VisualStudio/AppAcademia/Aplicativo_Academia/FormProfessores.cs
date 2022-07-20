@@ -33,9 +33,9 @@ namespace Aplicativo_Academia
             datagrid_professores.DataSource = Banco.DQL(vquery);
             datagrid_professores.Columns[0].Width = 60;
             datagrid_professores.Columns[1].Width = 170;
+            datagrid_professores.Columns[2].Width = 100;
         }
-
-        private void datagrid_professores_SelectionChanged(object sender, EventArgs e)
+        private void datagrid_professores_SelectionChanged_1(object sender, EventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
 
@@ -72,19 +72,11 @@ namespace Aplicativo_Academia
 
             if (tbox_idprof.Text == "")
             {
-                vquery = @"
-                INSERT INTO 
-                    tb_professores (T_NOME_PROFESSOR, T_TELEFONE)
-                VALUES
-                    ('" +tbox_nomeprof+ "','" +mtbox_tel.Text+ "')";
+                vquery = "INSERT INTO tb_professores (T_NOME_PROFESSOR, T_TELEFONE) VALUES ('" +tbox_nomeprof.Text+ "','" +mtbox_tel.Text+ "')";
             }
             else
             {
-                vquery = @"
-                UPDATE 
-                    tb_professores 
-                SET
-                    T_NOME_PROFESSOR = '" +tbox_nomeprof.Text+ "', T_TELEFONE = '" +mtbox_tel.Text+ "' WHERE N_ID_PROFESSOR = " + tbox_idprof.Text;
+                vquery = "UPDATE tb_professores SET T_NOME_PROFESSOR = '" +tbox_nomeprof.Text+ "', T_TELEFONE = '" +mtbox_tel.Text+ "' WHERE N_ID_PROFESSOR = " +tbox_idprof.Text;
             }
 
             Banco.DML(vquery);

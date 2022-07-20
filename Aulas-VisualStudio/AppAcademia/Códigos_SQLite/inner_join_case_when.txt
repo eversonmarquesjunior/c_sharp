@@ -7,7 +7,7 @@ SELECT
     
 CASE
     WHEN tbt.T_STATUS = 'A' THEN 'Ativa'
-    WHEN tbt.T_STATUS = 'P' THEN 'Paralizada'
+    WHEN tbt.T_STATUS = 'P' THEN 'Paralisada'
     WHEN tbt.T_STATUS = 'C' THEN 'Cancelada'
 END as 'Status'
     
