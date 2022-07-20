@@ -47,6 +47,8 @@
             this.cb_prof = new System.Windows.Forms.ComboBox();
             this.tbox_dscturma = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbox_vagas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_turmas)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_maxalunos)).BeginInit();
@@ -143,6 +145,7 @@
             this.bt_excluirprof.TabIndex = 2;
             this.bt_excluirprof.Text = "Excluir Turma";
             this.bt_excluirprof.UseVisualStyleBackColor = false;
+            this.bt_excluirprof.Click += new System.EventHandler(this.bt_excluirprof_Click);
             // 
             // bt_salvarturma
             // 
@@ -155,6 +158,7 @@
             this.bt_salvarturma.TabIndex = 1;
             this.bt_salvarturma.Text = "Salvar Edições";
             this.bt_salvarturma.UseVisualStyleBackColor = false;
+            this.bt_salvarturma.Click += new System.EventHandler(this.bt_salvarturma_Click);
             // 
             // bt_addturma
             // 
@@ -167,6 +171,7 @@
             this.bt_addturma.TabIndex = 0;
             this.bt_addturma.Text = "Adicionar Turma";
             this.bt_addturma.UseVisualStyleBackColor = false;
+            this.bt_addturma.Click += new System.EventHandler(this.bt_addturma_Click);
             // 
             // label1
             // 
@@ -192,6 +197,7 @@
             this.numeric_maxalunos.Name = "numeric_maxalunos";
             this.numeric_maxalunos.Size = new System.Drawing.Size(120, 23);
             this.numeric_maxalunos.TabIndex = 3;
+            this.numeric_maxalunos.ValueChanged += new System.EventHandler(this.numeric_maxalunos_ValueChanged);
             // 
             // cb_status
             // 
@@ -200,6 +206,7 @@
             this.cb_status.Name = "cb_status";
             this.cb_status.Size = new System.Drawing.Size(106, 23);
             this.cb_status.TabIndex = 4;
+            this.cb_status.SelectedIndexChanged += new System.EventHandler(this.cb_status_SelectedIndexChanged);
             // 
             // cb_horarios
             // 
@@ -208,6 +215,7 @@
             this.cb_horarios.Name = "cb_horarios";
             this.cb_horarios.Size = new System.Drawing.Size(232, 23);
             this.cb_horarios.TabIndex = 5;
+            this.cb_horarios.SelectedIndexChanged += new System.EventHandler(this.cb_horarios_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -225,6 +233,7 @@
             this.cb_prof.Name = "cb_prof";
             this.cb_prof.Size = new System.Drawing.Size(232, 23);
             this.cb_prof.TabIndex = 2;
+            this.cb_prof.SelectedIndexChanged += new System.EventHandler(this.cb_prof_SelectedIndexChanged);
             // 
             // tbox_dscturma
             // 
@@ -232,6 +241,7 @@
             this.tbox_dscturma.Name = "tbox_dscturma";
             this.tbox_dscturma.Size = new System.Drawing.Size(232, 23);
             this.tbox_dscturma.TabIndex = 1;
+            this.tbox_dscturma.TextChanged += new System.EventHandler(this.tbox_dscturma_TextChanged);
             // 
             // label5
             // 
@@ -242,11 +252,30 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Nome Turma";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(372, 246);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 15);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Vagas";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // tbox_vagas
+            // 
+            this.tbox_vagas.Location = new System.Drawing.Point(373, 264);
+            this.tbox_vagas.Name = "tbox_vagas";
+            this.tbox_vagas.Size = new System.Drawing.Size(100, 23);
+            this.tbox_vagas.TabIndex = 32;
+            // 
             // FormTurmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 463);
+            this.Controls.Add(this.tbox_vagas);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbox_dscturma);
             this.Controls.Add(this.cb_prof);
@@ -293,5 +322,7 @@
         private ComboBox cb_prof;
         private TextBox tbox_dscturma;
         private Label label5;
+        private Label label6;
+        private TextBox tbox_vagas;
     }
 }
