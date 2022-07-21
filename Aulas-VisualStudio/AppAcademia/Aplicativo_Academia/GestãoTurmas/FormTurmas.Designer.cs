@@ -133,6 +133,7 @@
             this.bt_imprimir.TabIndex = 3;
             this.bt_imprimir.Text = " Imprimir Turma";
             this.bt_imprimir.UseVisualStyleBackColor = false;
+            this.bt_imprimir.Click += new System.EventHandler(this.bt_imprimir_Click);
             // 
             // bt_excluirprof
             // 
@@ -264,10 +265,13 @@
             // 
             // tbox_vagas
             // 
+            this.tbox_vagas.Cursor = System.Windows.Forms.Cursors.No;
             this.tbox_vagas.Location = new System.Drawing.Point(373, 264);
             this.tbox_vagas.Name = "tbox_vagas";
+            this.tbox_vagas.ReadOnly = true;
             this.tbox_vagas.Size = new System.Drawing.Size(100, 23);
             this.tbox_vagas.TabIndex = 32;
+            this.tbox_vagas.TabStop = false;
             // 
             // FormTurmas
             // 

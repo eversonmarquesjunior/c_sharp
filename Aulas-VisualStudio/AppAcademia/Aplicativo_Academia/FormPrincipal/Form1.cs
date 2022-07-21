@@ -73,12 +73,18 @@ namespace Aplicativo_Academia
             FormTurmas formturmas = new FormTurmas();
             AbrirForm(3, formturmas);
         }
+        private void gestãoAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGestaoAlunos formgestaoalunos = new FormGestaoAlunos();
+            AbrirForm(3, formgestaoalunos);
+        }
 
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Global.logado)
             {
-                //procedimentos
+                FormNovoAluno formnovoaluno = new FormNovoAluno();
+                AbrirForm(1, formnovoaluno);
             }
             else
             {

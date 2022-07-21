@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Aplicativo_Academia
 {
@@ -111,7 +114,7 @@ namespace Aplicativo_Academia
                         N_MAX_ALUNOS,
                         T_STATUS
                     FROM
-                        tb_turmas  
+                        tb_turmas 
                     WHERE 
                         N_ID_TURMA = " +idselecionado;
 
@@ -121,7 +124,31 @@ namespace Aplicativo_Academia
                 numeric_maxalunos.Value = dt.Rows[0].Field<Int64>("N_MAX_ALUNOS");
                 cb_status.SelectedValue = dt.Rows[0].Field<string>("T_STATUS");
                 cb_horarios.SelectedValue = dt.Rows[0].Field<Int64>("N_ID_HORARIO");
+
+                tbox_vagas.Text = CalcVagas();
+
             }
+        }
+
+        //Contador de vagas
+        private string CalcVagas()
+        {
+            string vqueryvagas = String.Format(@"
+                    SELECT
+                       count (N_ID_ALUNO) as 'Contagem'
+                    FROM
+                        tb_alunos
+                    WHERE
+                        T_STATUS = 'A' and N_ID_TURMA = " + idselecionado);
+
+            DataTable dt = new DataTable();
+            dt = Banco.DQL(vqueryvagas);
+
+            int vagas = Int32.Parse(Math.Round(numeric_maxalunos.Value).ToString());
+            vagas = vagas - Int32.Parse(dt.Rows[0].Field<Int64>("Contagem").ToString());
+            tbox_vagas.Text = vagas.ToString();
+
+            return vagas.ToString();
         }
 
         private void bt_addturma_Click(object sender, EventArgs e)
@@ -139,13 +166,13 @@ namespace Aplicativo_Academia
         {
             if (modo != 0) 
             {
-                string vquery = "";
+                string vquerysalvar = "";
                 string msg = "";
 
                 if (modo == 1)
                 {
                     msg = "Dados alterados";
-                    vquery = String.Format(@"
+                    vquerysalvar = String.Format(@"
                         UPDATE
                             tb_turmas
                         SET
@@ -160,7 +187,7 @@ namespace Aplicativo_Academia
                 else
                 {
                     msg = "Turma adicionada";
-                    vquery = String.Format(@"
+                    vquerysalvar = String.Format(@"
                         INSERT INTO tb_turmas
                         (T_DSC_TURMA, N_ID_PROFESSOR, N_ID_HORARIO, N_MAX_ALUNOS, T_STATUS)
                         VALUES('{0}', {1}, {2}, {3}, '{4}')", tbox_dscturma.Text, cb_prof.SelectedValue, cb_horarios.SelectedValue, Int32.Parse(Math.Round(numeric_maxalunos.Value).ToString()), cb_status.SelectedValue);
@@ -168,12 +195,13 @@ namespace Aplicativo_Academia
 
                 int linha = datagrid_turmas.SelectedRows[0].Index;
      
-                Banco.DML(vquery);
+                Banco.DML(vquerysalvar);
 
                 if (modo == 1)
                 {
                     datagrid_turmas[1, linha].Value = tbox_dscturma.Text;
                     datagrid_turmas[2, linha].Value = cb_horarios.Text;
+                    tbox_vagas.Text = CalcVagas();
                 }
                 else
                 {
@@ -190,11 +218,108 @@ namespace Aplicativo_Academia
 
             if (res == DialogResult.Yes)
             {
-                string vquery = "DELETE FROM tb_turmas WHERE N_ID_TURMA = " +idselecionado;
-                Banco.DML(vquery);
+                string vqueryexcluir = "DELETE FROM tb_turmas WHERE N_ID_TURMA = " +idselecionado;
+                Banco.DML(vqueryexcluir);
                 datagrid_turmas.Rows.Remove(datagrid_turmas.CurrentRow);
             }
         }
+        private void bt_imprimir_Click(object sender, EventArgs e)    //Relatório em arquivo PDF
+        {
+            string nomearquivo = Global.caminho + @"\turmas.pdf";
+            FileStream arquivoPDF = new FileStream(nomearquivo, FileMode.Create);
+            Document doc = new Document(PageSize.A4);
+            PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
+
+            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Global.caminho + @"\tamboril.png");
+            img.ScaleToFit(100f, 50f);                               //Inserindo imagem
+            img.Alignment = Element.ALIGN_CENTER;
+            //img.SetAbsolutePosition(100f, 600f);      //X-Y
+
+            string dados = "";      
+
+            /*Paragraph paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 20, (int)System.Drawing.FontStyle.Bold));
+            paragrafo1.Alignment = Element.ALIGN_CENTER;         //Edição de parágrafos
+            paragrafo1.Add("Luka Doncic ");
+            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Italic);
+            paragrafo1.Add("Dallas Mavericks ");
+            string txt = "NBA\n";  
+            paragrafo1.Add(txt);
+
+            Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Bold));
+            paragrafo2.Alignment = Element.ALIGN_CENTER;         
+            string txt2 = "Campeões Temporada 22-23 \n\n";
+            paragrafo2.Add(txt2);*/
+
+            Paragraph paragrafo3 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Bold));
+            paragrafo3.Alignment = Element.ALIGN_CENTER;
+            paragrafo3.Add("Relatório de Turmas \n\n");
+
+            Paragraph paragrafo4 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Bold));
+            paragrafo4.Alignment = Element.ALIGN_CENTER;
+            paragrafo4.Add("Academia JR \n\n");
+
+            PdfPTable tabela = new PdfPTable(3); //3 colunas
+            tabela.DefaultCell.FixedHeight = 20;
+
+            tabela.AddCell("ID Turma");
+            tabela.AddCell("Turma");
+            tabela.AddCell("Horário");
+
+            DataTable dtturmas = Banco.DQL(vqueryglobal);
+            for (int i = 0; i < dtturmas.Rows.Count; i++)
+            {
+                tabela.AddCell(dtturmas.Rows[i].Field<Int64>("ID").ToString());
+                tabela.AddCell(dtturmas.Rows[i].Field<string>("Turma"));
+                tabela.AddCell(dtturmas.Rows[i].Field<string>("Horário"));
+            }
+
+            /*PdfPCell celula1 = new PdfPCell();
+            celula1.Colspan = 3; //linha 1 mesclada
+            celula1.AddElement(img);
+            tabela.AddCell(celula1);
+
+            tabela.AddCell("Nome Jogador");
+            tabela.AddCell("Time");
+            tabela.AddCell("Pontos");
+
+            tabela.AddCell("Lebron James");
+            tabela.AddCell("Lakers");
+            tabela.AddCell("30.5");
+
+            tabela.AddCell("Luka Doncic");
+            tabela.AddCell("Mavericks");
+            tabela.AddCell("35.7");
+
+            tabela.AddCell("Stephen Curry");
+            tabela.AddCell("Warriors");
+            tabela.AddCell("29.8");
+
+            PdfPCell celula2 = new PdfPCell(new Phrase("Tabela pontos/jogo"));
+            //celula.Rotation = 0;
+            celula2.Colspan = 3; //linha 1 mesclada
+            celula2.FixedHeight = 40;
+            celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+            celula2.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tabela.AddCell(celula2);*/
+
+            doc.Open();
+            //doc.Add(paragrafo1);
+            //doc.Add(paragrafo2);
+            doc.Add(img);   
+            doc.Add(paragrafo3);
+            doc.Add(tabela);
+            doc.Add(paragrafo4);
+            doc.Close();
+
+            DialogResult res = MessageBox.Show("Deseja abrir o relatório?", "Confirmação", MessageBoxButtons.YesNo);
+
+            //if (res == DialogResult.Yes)
+            //{
+            //   System.Diagnostics.Process.Start(Global.caminho + @"\turmas.pdf");     //não funciona
+            //}
+
+        }
+
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -221,7 +346,7 @@ namespace Aplicativo_Academia
             if (modo == 0)
             {
                 modo = 1;
-            }
+            }     
         }
 
         private void cb_status_SelectedIndexChanged(object sender, EventArgs e)
