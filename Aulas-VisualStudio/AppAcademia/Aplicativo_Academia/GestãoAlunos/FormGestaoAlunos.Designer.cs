@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.datagrid_alunos = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.mtbox_telaluno = new System.Windows.Forms.MaskedTextBox();
@@ -41,47 +41,45 @@
             this.cb_turmas = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_fechar = new System.Windows.Forms.Button();
-            this.bt_excluiraluno = new System.Windows.Forms.Button();
-            this.bt_salvaraluno = new System.Windows.Forms.Button();
             this.bt_financeiro = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pb_foto = new System.Windows.Forms.PictureBox();
+            this.bt_salvaraluno = new System.Windows.Forms.Button();
+            this.bt_excluiraluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_alunos)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // datagrid_alunos
             // 
             this.datagrid_alunos.AllowUserToAddRows = false;
             this.datagrid_alunos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_alunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_alunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datagrid_alunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_alunos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.datagrid_alunos.EnableHeadersVisualStyles = false;
             this.datagrid_alunos.Location = new System.Drawing.Point(12, 12);
             this.datagrid_alunos.Name = "datagrid_alunos";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_alunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_alunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datagrid_alunos.RowHeadersVisible = false;
             this.datagrid_alunos.RowTemplate.Height = 25;
             this.datagrid_alunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagrid_alunos.Size = new System.Drawing.Size(291, 429);
             this.datagrid_alunos.TabIndex = 1;
+            this.datagrid_alunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_alunos_CellContentClick);
+            this.datagrid_alunos.SelectionChanged += new System.EventHandler(this.datagrid_alunos_SelectionChanged);
             // 
             // label7
             // 
@@ -94,7 +92,6 @@
             // 
             // mtbox_telaluno
             // 
-            this.mtbox_telaluno.Enabled = false;
             this.mtbox_telaluno.Location = new System.Drawing.Point(472, 37);
             this.mtbox_telaluno.Mask = "(99) 00000-0000";
             this.mtbox_telaluno.Name = "mtbox_telaluno";
@@ -112,7 +109,6 @@
             // 
             // tbox_nomealuno
             // 
-            this.tbox_nomealuno.Enabled = false;
             this.tbox_nomealuno.Location = new System.Drawing.Point(309, 37);
             this.tbox_nomealuno.Name = "tbox_nomealuno";
             this.tbox_nomealuno.Size = new System.Drawing.Size(157, 23);
@@ -120,7 +116,6 @@
             // 
             // cb_status
             // 
-            this.cb_status.Enabled = false;
             this.cb_status.FormattingEnabled = true;
             this.cb_status.Location = new System.Drawing.Point(309, 88);
             this.cb_status.Name = "cb_status";
@@ -176,19 +171,19 @@
             this.bt_fechar.TabIndex = 4;
             this.bt_fechar.Text = "Fechar";
             this.bt_fechar.UseVisualStyleBackColor = false;
+            this.bt_fechar.Click += new System.EventHandler(this.bt_fechar_Click);
             // 
-            // bt_excluiraluno
+            // bt_financeiro
             // 
-            this.bt_excluiraluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bt_excluiraluno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_excluiraluno.Enabled = false;
-            this.bt_excluiraluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_excluiraluno.Location = new System.Drawing.Point(146, 6);
-            this.bt_excluiraluno.Name = "bt_excluiraluno";
-            this.bt_excluiraluno.Size = new System.Drawing.Size(137, 23);
-            this.bt_excluiraluno.TabIndex = 1;
-            this.bt_excluiraluno.Text = "Excluir Aluno";
-            this.bt_excluiraluno.UseVisualStyleBackColor = false;
+            this.bt_financeiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_financeiro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_financeiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_financeiro.Location = new System.Drawing.Point(289, 6);
+            this.bt_financeiro.Name = "bt_financeiro";
+            this.bt_financeiro.Size = new System.Drawing.Size(137, 23);
+            this.bt_financeiro.TabIndex = 2;
+            this.bt_financeiro.Text = "Financeiro";
+            this.bt_financeiro.UseVisualStyleBackColor = false;
             // 
             // bt_salvaraluno
             // 
@@ -201,59 +196,26 @@
             this.bt_salvaraluno.TabIndex = 0;
             this.bt_salvaraluno.Text = "Salvar Edições";
             this.bt_salvaraluno.UseVisualStyleBackColor = false;
+            this.bt_salvaraluno.Click += new System.EventHandler(this.bt_salvaraluno_Click);
             // 
-            // bt_financeiro
+            // bt_excluiraluno
             // 
-            this.bt_financeiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bt_financeiro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_financeiro.Enabled = false;
-            this.bt_financeiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_financeiro.Location = new System.Drawing.Point(289, 6);
-            this.bt_financeiro.Name = "bt_financeiro";
-            this.bt_financeiro.Size = new System.Drawing.Size(137, 23);
-            this.bt_financeiro.TabIndex = 2;
-            this.bt_financeiro.Text = "Financeiro";
-            this.bt_financeiro.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(310, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(302, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Imprimir Carteirinha";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(375, 350);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(171, 15);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Clique duplo para alterar a foto";
-            // 
-            // pb_foto
-            // 
-            this.pb_foto.Location = new System.Drawing.Point(406, 217);
-            this.pb_foto.Name = "pb_foto";
-            this.pb_foto.Size = new System.Drawing.Size(100, 130);
-            this.pb_foto.TabIndex = 60;
-            this.pb_foto.TabStop = false;
+            this.bt_excluiraluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_excluiraluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_excluiraluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_excluiraluno.Location = new System.Drawing.Point(146, 6);
+            this.bt_excluiraluno.Name = "bt_excluiraluno";
+            this.bt_excluiraluno.Size = new System.Drawing.Size(137, 23);
+            this.bt_excluiraluno.TabIndex = 1;
+            this.bt_excluiraluno.Text = "Excluir Aluno";
+            this.bt_excluiraluno.UseVisualStyleBackColor = false;
+            this.bt_excluiraluno.Click += new System.EventHandler(this.bt_excluiraluno_Click);
             // 
             // FormGestaoAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 482);
-            this.Controls.Add(this.pb_foto);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cb_turmas);
             this.Controls.Add(this.label7);
@@ -273,7 +235,6 @@
             this.Load += new System.EventHandler(this.FormGestaoAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_alunos)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,8 +256,5 @@
         private Button bt_excluiraluno;
         private Button bt_salvaraluno;
         private Button bt_financeiro;
-        private Button button1;
-        private Label label1;
-        private PictureBox pb_foto;
     }
 }
