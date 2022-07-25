@@ -67,7 +67,7 @@ namespace Aplicativo_Academia
 
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source = " +Global.caminhobanco + Global.nomebanco); 
+            conexao = new SQLiteConnection("Data Source = " + Global.caminhobanco + Global.nomebanco);
             conexao.Open();
             return conexao;
         }
@@ -87,7 +87,7 @@ namespace Aplicativo_Academia
                 da.Fill(dt);
                 vconexao.Close();
                 return dt;
-                
+
             }
             catch (Exception ex)
             {
@@ -156,7 +156,7 @@ namespace Aplicativo_Academia
                 var vconexao = ConexaoBanco();
 
                 var cmd = vconexao.CreateCommand();
-                cmd.CommandText = "UPDATE tb_usuarios SET T_NOME_USUARIO = '" +u.nome+ "', T_USERNAME = '" +u.username+ "', T_SENHA_USUARIO = '" +u.senha+ "', T_STATUS_USUARIO = '" +u.status +"', N_NIVEL_USUARIO = " +u.nivel+ " WHERE N_ID_USUARIO = " +u.id;
+                cmd.CommandText = "UPDATE tb_usuarios SET T_NOME_USUARIO = '" + u.nome + "', T_USERNAME = '" + u.username + "', T_SENHA_USUARIO = '" + u.senha + "', T_STATUS_USUARIO = '" + u.status + "', N_NIVEL_USUARIO = " + u.nivel + " WHERE N_ID_USUARIO = " + u.id;
                 da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
                 cmd.ExecuteNonQuery();
                 vconexao.Close();
@@ -177,7 +177,7 @@ namespace Aplicativo_Academia
                 var vconexao = ConexaoBanco();
 
                 var cmd = vconexao.CreateCommand();
-                cmd.CommandText = " DELETE FROM tb_usuarios WHERE N_ID_USUARIO = " +id;
+                cmd.CommandText = " DELETE FROM tb_usuarios WHERE N_ID_USUARIO = " + id;
                 da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
                 cmd.ExecuteNonQuery();
                 vconexao.Close();
@@ -218,7 +218,7 @@ namespace Aplicativo_Academia
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao inserir novo usuário");             
+                MessageBox.Show("Erro ao inserir novo usuário");
             }
         }
 
@@ -236,11 +236,11 @@ namespace Aplicativo_Academia
             var vconexao = ConexaoBanco();
 
             var cmd = vconexao.CreateCommand();
-            cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME = '" +u.username+ "'";
+            cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME = '" + u.username + "'";
             da = new SQLiteDataAdapter(cmd.CommandText, vconexao);
             da.Fill(dt);
-            
-            if(dt.Rows.Count > 0)
+
+            if (dt.Rows.Count > 0)
             {
                 res = true;
             }

@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbox_user = new System.Windows.Forms.TextBox();
-            this.tbox_senha = new System.Windows.Forms.TextBox();
             this.bt_logar = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
+            this.tbox_senha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,15 +62,6 @@
             this.tbox_user.TabIndex = 2;
             this.tbox_user.Text = "juninho";
             // 
-            // tbox_senha
-            // 
-            this.tbox_senha.Location = new System.Drawing.Point(12, 71);
-            this.tbox_senha.Name = "tbox_senha";
-            this.tbox_senha.PasswordChar = '*';
-            this.tbox_senha.Size = new System.Drawing.Size(165, 23);
-            this.tbox_senha.TabIndex = 3;
-            this.tbox_senha.Text = "123";
-            // 
             // bt_logar
             // 
             this.bt_logar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -94,6 +85,15 @@
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
+            // 
+            // tbox_senha
+            // 
+            this.tbox_senha.Location = new System.Drawing.Point(12, 71);
+            this.tbox_senha.Name = "tbox_senha";
+            this.tbox_senha.PasswordChar = '*';
+            this.tbox_senha.Size = new System.Drawing.Size(165, 23);
+            this.tbox_senha.TabIndex = 3;
+            this.tbox_senha.Text = "123";
             // 
             // FormLogin
             // 
@@ -122,8 +122,8 @@
         private Label label1;
         private Label label2;
         private TextBox tbox_user;
-        private TextBox tbox_senha;
         private Button bt_logar;
         private Button bt_cancelar;
+        private TextBox tbox_senha;
     }
 }

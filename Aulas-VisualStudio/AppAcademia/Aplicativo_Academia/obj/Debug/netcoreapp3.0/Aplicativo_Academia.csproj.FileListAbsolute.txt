@@ -1,0 +1,17 @@
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.csproj.AssemblyReference.cache
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.Form1.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormGestaoAlunos.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormHorarios.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormProfessores.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormTurmas.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormGestaoUsuarios.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormLogin.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormNovoAluno.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormSelecionarTurma.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.FormNovoUsuario.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.Properties.Resources.resources
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.csproj.GenerateResource.cache
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.GeneratedMSBuildEditorConfig.editorconfig
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.AssemblyInfoInputs.cache
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.AssemblyInfo.cs
+D:\CursoC#\Aulas-VisualStudio\AppAcademia\Aplicativo_Academia\obj\Debug\netcoreapp3.0\Aplicativo_Academia.csproj.CoreCompileInputs.cache

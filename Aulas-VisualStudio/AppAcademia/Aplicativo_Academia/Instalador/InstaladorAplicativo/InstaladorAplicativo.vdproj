@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1EDC9D03CE8C41CF887C1010AE41AD65"
+        "MsmKey" = "8:_0D9CE7D293564604B68C6EB5FEAF0DA8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -138,7 +138,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1EDC9D03CE8C41CF887C1010AE41AD65"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0D9CE7D293564604B68C6EB5FEAF0DA8"
             {
             "SourcePath" = "8:..\\..\\bin\\Debug\\net6.0-windows\\Banco\\Banco_Academia.db"
             "TargetName" = "8:Banco_Academia.db"
@@ -328,7 +328,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AplicativoAcademia"
         "ProductCode" = "8:{CEE9B6EE-C8B5-4FC9-810F-D25373B410F8}"
-        "PackageCode" = "8:{1548A904-E55F-46EB-BA69-CF55A1AC10C5}"
+        "PackageCode" = "8:{CA78EF71-1B4C-46C0-B60C-CB986A3303FE}"
         "UpgradeCode" = "8:{3FC3091B-B62B-41AE-BE12-20EBACA459CD}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
